@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Mockup</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            color: #0f0f0f;
+        }
+        header {
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .logo .icon {
+            width: 28px;
+            height: 20px;
+            background: red;
+            display: inline-block;
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
+        }
+        .search-bar {
+            flex: 1;
+            max-width: 560px;
+            margin: 0 20px;
+            display: flex;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-right: none;
+            border-radius: 2px 0 0 2px;
+            outline: none;
+        }
+        .search-bar button {
+            padding: 10px 16px;
+            border: 1px solid #ddd;
+            border-left: none;
+            background: #f8f8f8;
+            cursor: pointer;
+            border-radius: 0 2px 2px 0;
+        }
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .header-actions button {
+            border: none;
+            background: #f1f1f1;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        nav.sidebar {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            min-height: calc(100vh - 82px);
+        }
+        nav.sidebar a {
+            display: block;
+            padding: 10px 12px;
+            color: #111;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+        nav.sidebar a:hover {
+            background: #f2f2f2;
+        }
+        main {
+            display: grid;
+            gap: 20px;
+        }
+        .section-title {
+            font-size: 1.1rem;
+            margin: 0 0 10px;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 18px;
+        }
+        .video-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .video-thumb {
+            width: 100%;
+            display: block;
+            background: #000;
+        }
+        .video-meta {
+            padding: 12px;
+        }
+        .video-title {
+            font-size: 0.95rem;
+            margin: 0 0 6px;
+            line-height: 1.3;
+        }
+        .video-subtitle {
+            font-size: 0.85rem;
+            color: #606060;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="icon"></span>
+            <span>YouTube</span>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search" />
+            <button>Search</button>
+        </div>
+        <div class="header-actions">
+            <button>+</button>
+            <button>🔔</button>
+            <button>👤</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <a href="#">Home</a>
+            <a href="#">Shorts</a>
+            <a href="#">Subscriptions</a>
+            <a href="#">Library</a>
+            <a href="#">History</a>
+            <hr />
+            <a href="#">Trending</a>
+            <a href="#">Music</a>
+            <a href="#">Gaming</a>
+            <a href="#">News</a>
+            <a href="#">Live</a>
+        </nav>
+
+        <main>
+            <section>
+                <h2 class="section-title">Recommended</h2>
+                <div class="video-grid">
+                    <article class="video-card">
+                        <img class="video-thumb" src="https://via.placeholder.com/320x180?text=Video+1" alt="Video 1" />
+                        <div class="video-meta">
+                            <h3 class="video-title">Sample video title one</h3>
+                            <p class="video-subtitle">Channel Name · 1.2M views · 2 days ago</p>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <img class="video-thumb" src="https://via.placeholder.com/320x180?text=Video+2" alt="Video 2" />
+                        <div class="video-meta">
+                            <h3 class="video-title">Sample video title two</h3>
+                            <p class="video-subtitle">Channel Name · 800K views · 1 week ago</p>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <img class="video-thumb" src="https://via.placeholder.com/320x180?text=Video+3" alt="Video 3" />
+                        <div class="video-meta">
+                            <h3 class="video-title">Sample video title three</h3>
+                            <p class="video-subtitle">Channel Name · 450K views · 3 days ago</p>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <img class="video-thumb" src="https://via.placeholder.com/320x180?text=Video+4" alt="Video 4" />
+                        <div class="video-meta">
+                            <h3 class="video-title">Sample video title four</h3>
+                            <p class="video-subtitle">Channel Name · 230K views · 5 days ago</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
