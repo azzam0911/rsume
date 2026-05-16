@@ -1,205 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YouTube Mockup</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f9f9f9;
-            color: #0f0f0f;
-        }
-        header {
-            background: #fff;
-            border-bottom: 1px solid #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-        .logo .icon {
-            width: 28px;
-            height: 20px;
-            background: red;
-            display: inline-block;
-            clip-path: polygon(0 0, 100% 50%, 0 100%);
-        }
-        .search-bar {
-            flex: 1;
-            max-width: 560px;
-            margin: 0 20px;
-            display: flex;
-        }
-        .search-bar input {
-            flex: 1;
-            padding: 10px 12px;
-            border: 1px solid #ddd;
-            border-right: none;
-            border-radius: 2px 0 0 2px;
-            outline: none;
-        }
-        .search-bar button {
-            padding: 10px 16px;
-            border: 1px solid #ddd;
-            border-left: none;
-            background: #f8f8f8;
-            cursor: pointer;
-            border-radius: 0 2px 2px 0;
-        }
-        .header-actions {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-        .header-actions button {
-            border: none;
-            background: #f1f1f1;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        .container {
-            display: grid;
-            grid-template-columns: 220px 1fr;
-            gap: 20px;
-            padding: 20px;
-        }
-        nav.sidebar {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            min-height: calc(100vh - 82px);
-        }
-        nav.sidebar a {
-            display: block;
-            padding: 10px 12px;
-            color: #111;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-bottom: 5px;
-        }
-        nav.sidebar a:hover {
-            background: #f2f2f2;
-        }
-        main {
-            display: grid;
-            gap: 20px;
-        }
-        .section-title {
-            font-size: 1.1rem;
-            margin: 0 0 10px;
-        }
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 18px;
-        }
-        .video-card {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        .video-thumb {
-            width: 100%;
-            display: block;
-            background: #000;
-        }
-        .video-meta {
-            padding: 12px;
-        }
-        .video-title {
-            font-size: 0.95rem;
-            margin: 0 0 6px;
-            line-height: 1.3;
-        }
-        .video-subtitle {
-            font-size: 0.85rem;
-            color: #606060;
-            margin: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <div class="logo">
-            <span class="icon"></span>
-            <span>YouTube</span>
+  <div class="container">
+    <div class="profile">
+      <div class="profile_container">
+        <div class="profile_profileImg">
+          <img src="./images/profileImage.png" alt="azzam alrashed">
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search" />
-            <button>Search</button>
+        <div>
+          <h1 class="profile_name">
+            <span class="profile_name_firstName">Azzam</span>
+            <span class="profile_name_lastName">Alrashed</span>
+          </h1>
+          <p class="profile_title">CS student at shaqra university</p>
+          <p class="description profile_description">
+  Computer Science student that has a strong interest in game development,networking, and problem-solving. 
+  learning how to build projects using HTML, CSS, JavaScript. 
+  Motivated to learn, work in a team, and contribute to real-world technology projects.
+</p>
+         
         </div>
-        <div class="header-actions">
-            <button>+</button>
-            <button>🔔</button>
-            <button>👤</button>
-        </div>
-    </header>
-
-    <div class="container">
-        <nav class="sidebar">
-            <a href="#">Home</a>
-            <a href="#">Shorts</a>
-            <a href="#">Subscriptions</a>
-            <a href="#">Library</a>
-            <a href="#">History</a>
-            <hr />
-            <a href="#">Trending</a>
-            <a href="#">Music</a>
-            <a href="#">Gaming</a>
-            <a href="#">News</a>
-            <a href="#">Live</a>
-        </nav>
-
-        <main>
-            <section>
-                <h2 class="section-title">Recommended</h2>
-                <div class="video-grid">
-                    <article class="video-card">
-                        <img class="video-thumb" src="https://via.placeholder.com/320x180?text=Video+1" alt="Video 1" />
-                        <div class="video-meta">
-                            <h3 class="video-title">Sample video title one</h3>
-                            <p class="video-subtitle">Channel Name · 1.2M views · 2 days ago</p>
-                        </div>
-                    </article>
-                    <article class="video-card">
-                        <img class="video-thumb" src="https://via.placeholder.com/320x180?text=Video+2" alt="Video 2" />
-                        <div class="video-meta">
-                            <h3 class="video-title">Sample video title two</h3>
-                            <p class="video-subtitle">Channel Name · 800K views · 1 week ago</p>
-                        </div>
-                    </article>
-                    <article class="video-card">
-                        <img class="video-thumb" src="https://via.placeholder.com/320x180?text=Video+3" alt="Video 3" />
-                        <div class="video-meta">
-                            <h3 class="video-title">Sample video title three</h3>
-                            <p class="video-subtitle">Channel Name · 450K views · 3 days ago</p>
-                        </div>
-                    </article>
-                    <article class="video-card">
-                        <img class="video-thumb" src="https://via.placeholder.com/320x180?text=Video+4" alt="Video 4" />
-                        <div class="video-meta">
-                            <h3 class="video-title">Sample video title four</h3>
-                            <p class="video-subtitle">Channel Name · 230K views · 5 days ago</p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        </main>
+      </div>
     </div>
+    <div class="group-1">
+      <div class="skills">
+        <h3 class="title">relevant course work</h3>
+        <ul class="skills_list description">
+          <li>web development using HTML, CSS, and JavaScript</li>
+          <li>oracle mysql database systems</li>
+          <li>programming fundamentals</li>
+          <li>data structures and algorithms</li>
+          <li>computer networks</li>
+        </ul>
+      </div>
+      <div class="ref">
+        <h3 class="title">certificates</h3>
+        <div class="ref_item">
+          <h4 class="ref_name"><a href="https://www.netacad.com/s/ff9e491c-49be-4734-803e-a79e6e83dab1/users/4786ab7b-8c6f-4adc-9870-caa541c09939/Exploring_Networking_with_Cisco_Packet_Tracer_certificate_3zoome22-gmail-com_bdf44630-5826-483f-af26-15cf33c66753.pdf?Expires=1778880940&Signature=I9zkHIXvjj8MnzaeeZamvJ7XfjHEvgVDFGI8i9YZOjCkPzAoZHraN8ny2Q8eft7ZzyO-iQP5qyu7Gsmd0vsVN7iEvSMDJts~Re6r6Vwk30x0xbpy0ywRnBI1DC9kaTA4ME6NhIqe~cRwsVkXJcc83GKzdQQg6XjqAwYb65RJAXz3xWR~kqg8xHoSUd-35MIsbZcSXNfyUQ7biv8AVAHSLy7J2cS-y3Ts6a9vR6cvyt3zPzp7qOIpm5PJ7Ekb6eqgI8gd-u8lPqNlQPeE9bgohcFbZCzCJ~gCy74R0UwzTOOLNjKKUyamiMxpjhgt5eiTSlqAoghqnCArNqBIRMA4qw__&Key-Pair-Id=K2KLPFOPQWYG51">Exploring networking with cisco packet tracer</a></h4>
+        </div>
+        <div class="ref_item">
+          <h4 class="ref_name"><a href="https://www.netacad.com/s/ff9e491c-49be-4734-803e-a79e6e83dab1/users/4786ab7b-8c6f-4adc-9870-caa541c09939/Exploring_IoT_with_Cisco_Packet_Tracer_certificate_3zoome22-gmail-com_7e9202d8-4c5f-4f73-b9ae-2b27545b90a7.pdf?Expires=1778880460&Signature=SdKkN7un6qfGqqXNmJvdQHacHf0K7wHUAMuTKzsg-L80smuGLJwS7VVZ8Q3uUJQ7hrlQFXooPTHQKhS8u32Z7KE7iqBwZKo9vfgUHiN~nfO3xkOn4G0NCjfhJojaWPJQisTInBebjxDsL~YDhPxPVLlJhf89FAz2Buf7rSGPaOoxUE7zDDh4MwVa6KwrmJcVIxXH4JmgZG2qL5Qtx1Aa1L1wOFbhr6vKHtsASW9zcT3bdQYaG456a81rvobA8eFSHT1SgEPKMOk1tqD7ehoW3LqbHLNiXsDtTZAt-11yCZ70DiFwEuEPNUf26v2SjdfyNHZ7wx9mLheqqrY~aRwzUQ__&Key-Pair-Id=K2KLPFOPQWYG51">exploring IoT with cisco packet tracer</a></h4>
+        </div>
+        <div class="ref_item">
+          <h4 class="ref_name"><a href="https://www.credly.com/badges/514783d1-7dd0-40c1-9187-0f5d98e06fc3">python essentials</a></h4>
+        </div>
+        <div class="ref_item">
+          <h4 class="ref_name"><a href="https://www.netacad.com/s/ff9e491c-49be-4734-803e-a79e6e83dab1/users/4786ab7b-8c6f-4adc-9870-caa541c09939/Getting_Started_with_Cisco_Packet_Tracer_certificate_3zoome22-gmail-com_af0b642c-02f3-4095-8a72-67468097f7b4.pdf?Expires=1778920241&Signature=SCvUgzWgUl1eizeQHQ6oTIvl089-E2vjSSdtmPiES8td0YoTbGEsuotoRzfpbcDTlTJhGqD9kQ0D1TXUx66m5gbcoRBp8k6O1-n-h80foQpK7ZcnMuQhNBd7zf6mnFta-ZItDZk7ZivwqJrdq7-ZsoQZBfhbvHStlShQEuUPS~GVm-iVGBHlGLSd5rEp-775jCfxDn1Vabx1YhUk3eo04v7edxzo9RfdM8WclyMYefMzTMJwINyJXIXwoUkMV8w8KI9rUXOcm0zy4m~41TtU7GBCPj5jGy2T9az8YeiOgHgEVdXjmCF6TkMolt2bjInytraBE8R6uvrrpt62bLM5kQ__&Key-Pair-Id=K2KLPFOPQWYG51">Getting started with packet tracer</a></h4>
+        </div>
+        <div class="ref_item">
+          
+        </div>
+      </div>
+
+      <div class="certification">
+    
+        <div class="certification_item">
+          <h4 class="item_title"><a href="https://www.cisco.com/site/us/en/learn/training-certifications/exams/ccna.html">CCNA(soon)</a></h4>
+          <p class="description">
+           currntly preparing for the CCNA certification, which validates my knowledge and skills in networking fundamentals, IP connectivity, security,and routing and switching.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="group-2">
+      <div class="exp">
+        <h3 class="title">Experience</h3>
+        <div class="exp_item">
+          <h4 class="item_title">godot</h4>
+          <p class=" description">
+            i have worked on godot engine for a couple of months and i have built a 2d story game using it,it helped me get better at programming and problem-solving.
+          </p>
+        </div>
+        <div class="exp_item">
+          <h4 class="item_title">unity</h4>
+          <p class="description">
+            after getting familiar with godot i started learning unity and coding in c#, although the syntax is unusual to me im still learning it gradually.
+          </p>
+        </div>
+      </div>
+      <div class="awards">
+        <h3 class="title">roles i aspire to work in</h3>
+        <div class="awards_item">
+          <h4 class="item_title">network engineering with automation</h4>
+          <p class=" description">
+          using python to automate network tasks and configurations, and using llms correctly, improving efficiency and reducing manual errors in network management.
+          </p>
+        </div>
+        <div class="awards_item">
+          <h4 class="item_title">successful game developer</h4>
+          <p class="description">
+           making games that are fun and engaging, and that can be enjoyed by a wide audience, and making a positive impact on the gaming industry.
+          </p>
+        </div>
+      </div>
+
+      
+
+      </div>
+    </div>
+    <hr>
+    <div class="group-3">
+      <div class="contact">
+        <h3 class="title">Contact</h3>
+        <div class="contact_info">
+          <p class="description">
+            shaqra, saudi arabia
+          </p>
+          <p class="description">
+            <a href="tel:+966590048084">+966590048084</a>
+          </p>
+          <p class="description">
+            <a href="mailto:3zoome22@gmail.com">3zoome22@gmail.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="social">
+        <h3 class="title">Socials</h3>
+        <div class="social_items">
+          <a href="https://github.com/azzam0911" target="_blank" class="social_item">
+            <i data-feather="github"></i>
+            <span>/azzam0911</span>
+          </a>
+          
+          <a href="https://www.linkedin.com/in/azzam-alrashed-145b6b326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social_item">
+            <i data-feather="linkedin"></i>
+            <span>/azzam-alrashed-145b6b326</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    feather.replace()
+  </script>
 </body>
+
 </html>
